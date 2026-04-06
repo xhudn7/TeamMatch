@@ -1,0 +1,33 @@
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left,rgb(18, 107, 42) 25% ,rgb(12, 104, 12),rgb(0, 0, 0) 80%);
+}
+
+
+#stars{
+    color: red;
+}
+
+
+#container-1{
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 55%;
+    padding:0% 0% 0% 1% ;
+    border-radius: 5%;
+
+}
+
+
+#bloock-1{
+    padding-left: 3%;
+    width: 250px;
+    height: 50px;
+    
+}
+
+
