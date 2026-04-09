@@ -19,7 +19,16 @@
                             <i class="uil uil-envelope" ></i>
                         </div>
                         <div class="inbot-box">
-                            <input type="password" class="pass" placeholder="Enter your password" required>
+                            <input 
+                                placeholder="Enter your Password"
+                                class="pass"
+                                type="password" 
+                                name="password"
+                                required
+                                minlength="8"
+                                maxlength="20"
+                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,20}"
+                                title="Use 8+ chars, uppercase, lowercase, number, and special char">
                             <i class="uis uis-padlock" style="font-size: 19px;"></i>
                             <div class="icon">
                                 <i class="uil uil-eye-slash eye-hide"></i>
@@ -40,7 +49,7 @@
                         </div>
                         <div class="login-signup">
                             <span>Not a member?</span>
-                            <a href="#" class="text signup-text">Signup now</a>
+                            <a href="signup.html" class="text signup-text">Signup now</a>
                         </div>
                     </div>
                 </form>
