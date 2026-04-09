@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 hidden.txt
-=======
-hidden.txt
->>>>>>> f6e2253 (added gitignore and hidden on Faisal branch)
-=======
-hidden.txt
->>>>>>> 4b80e46 (untrack the file and hide it)
+unwanted.html

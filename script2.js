@@ -6,7 +6,7 @@ eyeHide.addEventListener("click", function () {
     passwordInput.type = "text";
     eyeHide.style.display = "none";
     eyeShow.style.display = "block";
-    eyeShow.style.color = "#4070f4";
+    eyeShow.style.color = "#f44040";
 });
 
 eyeShow.addEventListener("click", function () {
@@ -15,3 +15,8 @@ eyeShow.addEventListener("click", function () {
     eyeShow.style.display = "none";
     
 });
+
+//another file
+
+
+
