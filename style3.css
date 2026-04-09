@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Fjalla+One&family=Oswald:wght@700&display=swap');
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient( circle at top right ,rgb(4, 109, 13) 25%,rgb(7, 163, 54),rgb(7, 163, 54) 60%,rgb(10, 55, 153));
+    position: relative;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    width:400px;
+    height: 300px;
+    background-color: aliceblue;
+    border-radius: 7px;
+    overflow: hidden;
+
+}
+.container .title{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    font-family: Boldonse;
+    letter-spacing: 1px;
+
+}
+.container form{
+    position: absolute;
+    display: flex;
+    top: 17%;
+    left: 5%
+    
+}
+.container  form .user-details{
+   width: 380px;
+    
+}
+.container  form .user-details .inbot-box{
+    padding-bottom:5%;
+    position: relative;
+    
+    
+
+}
+.container  form .user-details .inbot-box input{
+    width:300px;
+    height: 25px;
+    padding: 1% 1% 1% 9%;
+    margin-left: auto;
+    border-radius: 5px;
+    border-style:ridge;
+    border-width: 3px;
+    border-color: #d9d9d9;
+    box-shadow: 1px 1px 5px black;
+
+}
+.container  form .user-details .inbot-box i{
+    position: absolute;
+    left: 3%;
+    top: 15%;
+    font-size: 20px;
+    
+    
+}
+.container  form .user-details .inbot-box .icon i{
+    position: absolute;
+    left: 310px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    
+}
+.icon i:hover{
+    transform: scale(1.1);
+}
+.icon i.active{
+    color: #4070f4;
+}
+.eye-hide{
+    display: block;
+}
+
+.eye-show{
+    display: none;
+    color: #4070f4;
+}
+
+.container  form .user-details .button-submit input{
+    width: 250px;
+    height: 35px;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    background: radial-gradient( circle at top right ,rgb(4, 109, 13) 25%,rgb(7, 163, 54),rgb(7, 163, 54) 60%,rgb(10, 55, 153));
+    border-radius: 7px; 
+    position: absolute;
+    left: calc(34.5% / 2 - 10px);
+    bottom: -50px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    
+}
+.container  form .user-details .button-submit input:hover{
+    transform: scale(1.09);
+}
+
+
+
+.container  form .user-details .inbot-box input:focus{
+    outline: none;
+    border-color: blue;
+}
+.container  form .user-details .inbot-box input:focus ~ i{
+    color: blue;
+    
+}
+
+.container  form .user-details .inbot-box input:valid{
+    outline: none;
+    border-color: rgb(22, 221, 38);
+    box-shadow: 1px 1px 8px rgb(22, 221, 38);
+}
+.container  form .user-details .inbot-box input:valid ~ i{
+    color: rgb(22, 221, 38);
+   
+}
+
+.user-details .checkbox-text{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family:  'Fjalla' , 'One family','Oswald';
+}
+
+
+
+.user-details .checkbox-content {
+
+    accent-color: rgb(22, 221, 38);
+    
+}
+
+.user-details .checkbox-content input:checked + label {
+   
+}
+
+.checkbox-text a{
+    padding-right: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+.checkbox-text a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+     color: blue;
+}
+
+.user-details .login-signup{
+    position: absolute;
+    bottom: -80px;
+    left: 80px;
+}
+.user-details .login-signup span{
+    text-decoration: none;
+    color: black;
+}
+.user-details .login-signup a{
+    font-family:monospace;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.user-details .login-signup .signup-text{
+    color: black;
+    text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease;
+}
+.user-details .login-signup .signup-text:hover{
+    color: blue;
+    text-decoration: none;
+    transform: scale(1.09);
+}
+

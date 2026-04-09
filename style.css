@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+
+.navbar {
+  background: #2ecc71;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2%;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8% 1.5%;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: #27ae60;
+}
+
+
+header {
+  background: white;
+  padding: 2% 5%;
+  box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.1);
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo h1 {
+  color: #2ecc71;
+  font-size: 2.5vw;
+  border-left: 0.5vw solid #27ae60;
+  padding-left: 1%;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 10% 5%;
+  background: #2ecc71;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3.5vw;
+}
+
+.hero p {
+  font-size: 1.5vw;
+  margin: 2% 0;
+}
+
+.hero .btn-main,
+.hero .btn-secondary {
+  padding: 1% 2%;
+  margin: 1%;
+  border-radius: 0.5vw;
+  text-decoration: none;
+  font-size: 1.2vw;
+  display: inline-block;
+}
+
+.hero .btn-main {
+  background: white;
+  color: #2ecc71;
+}
+
+.hero .btn-secondary {
+  background: #27ae60;
+  color: white;
+}
+
+
+.options {
+  text-align: center;
+  padding: 5% 2%;
+}
+
+.options h2 {
+  font-size: 2.5vw;
+  margin-bottom: 2%;
+}
+
+.option-btn {
+  display: inline-block;
+  margin: 1%;
+  padding: 1% 2%;
+  background: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  transition: background 0.3s;
+}
+
+.option-btn:hover {
+  background: #27ae60;
+}
+
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  background: white;
+}
+
+.step {
+  width: 30%;
+  text-align: center;
+}
+
+.step h3 {
+  font-size: 1.8vw;
+}
+
+.step p {
+  font-size: 1.2vw;
+}
+
+
+.features {
+  text-align: center;
+  padding: 5%;
+}
+
+.features h2 {
+  font-size: 2.5vw;
+  margin-bottom: 2%;
+}
+
+.feature-box {
+  display: inline-block;
+  width: 20%;
+  margin: 1%;
+  padding: 2%;
+  background: white;
+  border-radius: 1vw;
+  box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.1);
+}
+
+.feature-box h3 {
+  font-size: 1.5vw;
+}
+
+.feature-box p {
+  font-size: 1.1vw;
+}
+
+
+footer {
+  text-align: center;
+  padding: 2%;
+  background: #2ecc71;
+  color: white;
+  font-size: 1.2vw;
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 3%;
+    padding: 2%;
+  }
+
+  .navbar a {
+    font-size: 3vw;
+    padding: 2% 4%;
+  }
+
+  .logo h1 {
+    font-size: 6vw;
+  }
+
+  .hero h2 {
+    font-size: 6vw;
+  }
+
+  .hero p {
+    font-size: 3.5vw;
+  }
+
+  .hero .btn-main,
+  .hero .btn-secondary {
+    font-size: 3vw;
+    padding: 2% 4%;
+  }
+
+  .options h2 {
+    font-size: 5vw;
+  }
+
+  .option-btn {
+    font-size: 3vw;
+    padding: 2% 4%;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+
+  .step h3 {
+    font-size: 4vw;
+  }
+
+  .step p {
+    font-size: 3vw;
+  }
+
+  .feature-box {
+    width: 80%;
+  }
+
+  .feature-box h3 {
+    font-size: 4vw;
+  }
+
+  .feature-box p {
+    font-size: 3vw;
+  }
+
+  footer {
+    font-size: 3vw;
+  }
+}

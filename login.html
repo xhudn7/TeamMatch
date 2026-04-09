@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style3.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+        
+    </head>
+
+
+    <body>
+        <div class="container">
+                <div class="title">Login</div> 
+                <form action="#">
+                    <div class="user-details">      
+                        <div class="inbot-box">
+                            <input type="email" placeholder="Enter your Email" required>
+                            <i class="uil uil-envelope" ></i>
+                        </div>
+                        <div class="inbot-box">
+                            <input 
+                                placeholder="Enter your Password"
+                                class="pass"
+                                type="password" 
+                                name="password"
+                                required
+                                minlength="8"
+                                maxlength="20"
+                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,20}"
+                                title="Use 8+ chars, uppercase, lowercase, number, and special char">
+                            <i class="uis uis-padlock" style="font-size: 19px;"></i>
+                            <div class="icon">
+                                <i class="uil uil-eye-slash eye-hide"></i>
+                                <i class="uil uil-eye eye-show"></i>
+                            </div>
+                        </div>
+
+                        <div class="button-submit">
+                            <input type="submit" value="Login">
+                            
+                        </div>
+                        <div class="checkbox-text">
+                            <div class="checkbox-content">
+                                <input type="checkbox" id="logCheck">
+                                <label for="logCheck">Remember me</label>
+                            </div>
+                            <a href="#" class="text">Forgot Password?
+                        </div>
+                        <div class="login-signup">
+                            <span>Not a member?</span>
+                            <a href="signup.html" class="text signup-text">Signup now</a>
+                        </div>
+                    </div>
+                </form>
+                
+            
+        </div>
+
+        <script src="script2.js"></script>
+    </body>
+</html>
