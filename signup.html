@@ -10,15 +10,17 @@
     
     <div class="container">
         <div class="title" id="mainTitle"> Registration</div>
-        <form action="#">
+        
+        <form id="registerForm" action="#"> <!--khaled this is NEW {adding id for js}+delete required so we make it from js-->
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name</span>
                     <input
+                        id="firstName"
                         placeholder="Faisal" 
                         type="text" 
                         name="firstName" 
-                        required
+                        
                         minlength="3"
                         pattern="[A-Za-z]{2,}"
                         title="First name must contain letters only and be at least 2 characters">
@@ -26,10 +28,11 @@
                 <div class="input-box">
                     <span class="details">Last Name</span>
                     <input
+                        id="lastName"
                         placeholder="Khalied" 
                         type="text" 
-                        name="firstName" 
-                        required
+                        name="lastName" 
+                         
                         minlength="3"
                         pattern="[A-Za-z]{2,}"
                         title="First name must contain letters only and be at least 2 characters">
@@ -37,7 +40,11 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="email" placeholder="example@gmail.com" required
+                    <input 
+                    id="email"
+                    type="email"
+                    placeholder="example@gmail.com" 
+                    
                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                     title="Enter a valid email like example@gmail.com"
                     >
@@ -45,9 +52,10 @@
                 <div class="input-box">
                     <span class="details">Password</span>
                     <input 
+                        id="password"
                         type="password" 
                         name="password"
-                        required
+                        
                         minlength="8"
                         maxlength="20"
                         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,20}"
@@ -81,6 +89,7 @@
                 </div>
                 
             </div>
+            <p id="message"></p>
             <div class="button">
                     <input type="submit" value="Register" >
                 </div>
