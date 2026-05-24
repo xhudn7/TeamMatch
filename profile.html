@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Team Match</title>
+  <link rel="stylesheet" href="profile.css">
+
+  <script>
+    if (sessionStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Register</a>
+  <a href="profile.html">Profile</a>
+  <a href="#" onclick="logoutUser()">Logout</a>
+</nav>
+
+<div class="profile-container">
+
+  <div class="profile-card">
+    <div class="avatar">TM</div>
+    <h1>Student Profile</h1>
+    <p>Manage your Team Match profile information</p>
+  </div>
+
+  <div class="details-card">
+    <h2>Profile Form</h2>
+
+    <form action="#" method="post">
+
+      <label>Full Name</label>
+      <input type="text" name="fullName" placeholder="Enter your full name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="example@stu.kau.edu.sa" required>
+
+      <label>Major</label>
+      <select name="major" required>
+        <option value="">-- Select Major --</option>
+        <option value="IS">IS</option>
+        <option value="IT">IT</option>
+        <option value="CS">CS</option>
+      </select>
+
+      <label>Skills</label>
+      <textarea name="skills" placeholder="Example: HTML, CSS, JavaScript"></textarea>
+
+      <label>Project Idea</label>
+      <textarea name="projectIdea" placeholder="Write your graduation project idea"></textarea>
+
+      <label>Looking For</label>
+      <select name="lookingFor">
+        <option value="">-- Select Option --</option>
+        <option value="team">Looking for Team</option>
+        <option value="members">Looking for Members</option>
+        <option value="idea">I have a Project Idea</option>
+      </select>
+
+      <button type="submit">Save Profile</button>
+
+    </form>
+  </div>
+
+</div>
+
+<script>
+  function logoutUser() {
+    sessionStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
