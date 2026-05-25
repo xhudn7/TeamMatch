@@ -1,0 +1,83 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/About">About Us</a>
+        <a href="/Home/Login">Login</a>
+        <a href="/Home/Signup">Register</a>
+        <a href="/Home/Profile">Profile</a>
+    </nav>
+
+    <div class="container">
+        <h1>Student Profile</h1>
+        <p>Enter and manage your Team Match profile information</p>
+
+        <form asp-action="Profile" asp-controller="Home" method="post">
+
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" name="FirstName" required>
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" name="LastName" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="Email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="Password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+                <select name="Gender" required>
+                    <option value="">-- Select Gender --</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Major</label>
+                <select name="Major" required>
+                    <option value="">-- Select Major --</option>
+                    <option>IS</option>
+                    <option>IT</option>
+                    <option>CS</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Skills</label>
+                <textarea name="Skills" required></textarea>
+            </div>
+
+            <button type="submit">Save Profile</button>
+
+            <p style="color:green; font-weight:bold;">
+                @ViewBag.Message
+            </p>
+
+        </form>
+    </div>
+
+</body>
+</html>

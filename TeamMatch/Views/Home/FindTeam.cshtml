@@ -1,0 +1,47 @@
+﻿@model List<TeamMatch.Models.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Find Team Members</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/About">About Us</a>
+        <a href="/Home/Login">Login</a>
+        <a href="/Home/Signup">Register</a>
+        <a href="/Home/Profile">Profile</a>
+    </nav>
+
+    <div class="container">
+        <h1>Find Team Members</h1>
+
+        <table border="1" width="100%" cellpadding="10">
+            <tr>
+                <th>Student Name</th>
+                <th>Major</th>
+                <th>Skills</th>
+            </tr>
+
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.FirstName @user.LastName</td>
+                    <td>@user.Major</td>
+                    <td>@user.Skills</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</body>
+</html>

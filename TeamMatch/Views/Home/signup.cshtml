@@ -1,0 +1,202 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="~/css/stely2.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title" id="mainTitle">
+            Registration
+        </div>
+
+        <form asp-action="Signup" asp-controller="Home" method="post">
+
+            <div class="user-details">
+
+                <!-- First Name -->
+                <div class="input-box">
+
+                    <span class="details">First Name</span>
+
+                    <input name="FirstName"
+                           placeholder="Faisal"
+                           type="text"
+                           required
+                           minlength="3"
+                           pattern="[A-Za-z]{2,}"
+                           title="First name must contain letters only and be at least 2 characters">
+
+                </div>
+
+                <!-- Last Name -->
+                <div class="input-box">
+
+                    <span class="details">Last Name</span>
+
+                    <input name="LastName"
+                           placeholder="Khalied"
+                           type="text"
+                           required
+                           minlength="3"
+                           pattern="[A-Za-z]{2,}"
+                           title="Last name must contain letters only and be at least 2 characters">
+
+                </div>
+
+                <!-- Email -->
+                <div class="input-box">
+
+                    <span class="details">Email</span>
+
+                    <input name="Email"
+                           type="email"
+                           placeholder="example@gmail.com"
+                           required
+                           pattern="[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                           title="Enter a valid email like example@gmail.com">
+
+                </div>
+
+                <!-- Password -->
+                <div class="input-box">
+
+                    <span class="details">Password</span>
+
+                    <input name="Password"
+                           type="password"
+                           required
+                           minlength="8"
+                           maxlength="20"
+                           pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@$!%*?&]).{8,20}"
+                           title="Use 8+ chars, uppercase, lowercase, number, and special char">
+
+                </div>
+
+                <!-- Gender -->
+                <div class="gender-details">
+
+                    <input type="radio"
+                           name="Gender"
+                           id="dot-1"
+                           value="Male"
+                           required>
+
+                    <input type="radio"
+                           name="Gender"
+                           id="dot-2"
+                           value="Female">
+
+                    <span class="gender-title">
+                        Gender
+                    </span>
+
+                    <div class="category">
+
+                        <label for="dot-1">
+
+                            <span class="dot-1"></span>
+
+                            <span class="gender">
+                                Male
+                            </span>
+
+                        </label>
+
+                        <label for="dot-2">
+
+                            <span class="dot-2"></span>
+
+                            <span class="gender">
+                                Female
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- Major -->
+                <div class="major-box">
+
+                    <span class="details">
+                        Select Major
+                    </span>
+
+                    <select name="Major" required>
+
+                        <option value="" disabled selected>
+                            -- Select Major --
+                        </option>
+
+                        <option value="IS">IS</option>
+
+                        <option value="IT">IT</option>
+
+                        <option value="CS">CS</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Skills -->
+                <div class="input-box">
+
+                    <span class="details">Skills</span>
+
+                    <input name="Skills"
+                           placeholder="HTML, CSS, JavaScript">
+
+                </div>
+
+            </div>
+
+            <!-- Success Message -->
+            <p style="color:green; font-weight:bold;">
+
+                @ViewBag.Message
+
+            </p>
+
+            <!-- Register Button -->
+            <div class="button">
+
+                <input type="submit" value="Register">
+
+            </div>
+
+            <!-- Login -->
+            <div class="signup">
+
+                <span>Already have account ?</span>
+
+                <a href="/Home/Login"
+                   class="login-text">
+
+                    Login now
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

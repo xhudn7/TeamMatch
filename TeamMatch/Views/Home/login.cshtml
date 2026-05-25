@@ -1,0 +1,168 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="~/css/style3.css">
+
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            Login
+        </div>
+
+        <form onsubmit="loginUser(event)">
+
+            <div class="user-details">
+
+                <!-- Email -->
+                <div class="inbot-box">
+
+                    <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    required>
+
+                    <i class="uil uil-envelope"></i>
+
+                </div>
+
+                <!-- Password -->
+                <div class="inbot-box">
+
+                    <input
+                    placeholder="Enter your Password"
+                    class="pass"
+                    type="password"
+                    name="password"
+                    required
+                    minlength="8"
+                    maxlength="20"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@$!%*?&]).{8,20}"
+                    title="Use 8+ chars, uppercase, lowercase, number, and special char">
+
+                    <i class="uis uis-padlock"
+                       style="font-size: 19px;">
+                    </i>
+
+                    <div class="icon">
+
+                        <i class="uil uil-eye-slash eye-hide"></i>
+
+                        <i class="uil uil-eye eye-show"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- Login Button -->
+                <div class="button-submit">
+
+                    <input type="submit" value="Login">
+
+                </div>
+
+                <!-- Remember -->
+                <div class="checkbox-text">
+
+                    <div class="checkbox-content">
+
+                        <input type="checkbox" id="logCheck">
+
+                        <label for="logCheck">
+                            Remember me
+                        </label>
+
+                    </div>
+
+                    <a href="#" class="text">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <!-- Signup -->
+                <div class="login-signup">
+
+                    <span>Not a member?</span>
+
+                    <a href="/Home/Signup"
+                       class="text signup-text">
+
+                        Signup now
+
+                    </a>
+
+                </div>
+
+                <!-- Footer Links -->
+                <div style="position:absolute;
+                    bottom:-115px;
+                    left:30px;
+                    font-size:14px;">
+
+                    <a href="/Home/Index">Home</a> |
+
+                    <a href="/Home/About">About Us</a>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/js/script2.js"></script>
+
+    <script>
+
+        function loginUser(event) {
+
+        event.preventDefault();
+
+        let email =
+        document.querySelector('input[type="email"]').value;
+
+        let password =
+        document.querySelector(".pass").value;
+
+        if (email !== "" && password !== "") {
+
+        sessionStorage.setItem("isLoggedIn", "true");
+
+        window.location.href = "/Home/Profile";
+
+        }
+
+        else {
+
+        alert("Please enter email and password");
+
+        }
+        }
+
+    </script>
+
+</body>
+
+</html>
